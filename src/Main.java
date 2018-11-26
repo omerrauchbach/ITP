@@ -16,7 +16,7 @@ public class Main
 		//task3();
 		//task4();
 		//task5();
-		//task6();
+		task6();
 		System.out.println("");
 		System.out.println("Done!");
 	}
@@ -75,11 +75,7 @@ public class Main
 		solveInstances(solvers, "tile4x4");
 	}
 	
-	public static void solveInstances
-	(
-		List<ASearch> 	solvers,
-		String 			instancesType
-	) 
+	public static void solveInstances(List<ASearch> solvers, String instancesType)
 	{
 		try 
 		{
