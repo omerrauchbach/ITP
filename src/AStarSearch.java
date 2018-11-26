@@ -79,7 +79,7 @@ public class AStarSearch   extends ASearch
 		if(node== null)
 			return;
 		Open.add(node);
-		Open.sort(nodeSort);
+		Open.sort(Comparator.comparing(ASearchNode::getH));
 	}
 
 	private Comparator<ASearchNode> nodeSort = new Comparator<ASearchNode>() {
