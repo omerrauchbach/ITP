@@ -24,7 +24,6 @@ abstract public class ASearch
 		ASearchNode Vs 		= createSearchRoot(problemState);
 		ASearchNode current	= null;
 		addToOpen(Vs);
-		
 		while (openSize() > 0)
 		{
 			current = getBest();

@@ -45,7 +45,10 @@ public class AStarSearch   extends ASearch
 			if(tmpNode.equals(node))
 				return tmpNode;
 		}
+
 		return node;
+
+
 	}
 
 	@Override
@@ -79,21 +82,10 @@ public class AStarSearch   extends ASearch
 		if(node== null)
 			return;
 		Open.add(node);
-		Open.sort(Comparator.comparing(ASearchNode::getH));
+		Open.sort(Comparator.comparing(ASearchNode::getF));
+
 	}
 
-	private Comparator<ASearchNode> nodeSort = new Comparator<ASearchNode>() {
-
-		public int compare(ASearchNode s1, ASearchNode s2) {
-
-			double f1 = s1.getG()+s1.getH();
-			double f2 = s2.getG()+s2.getH();
-
-			int res = (int)(f1-f2);
-			return res;
-
-
-		}};
 
 	@Override
 	public void addToClosed
